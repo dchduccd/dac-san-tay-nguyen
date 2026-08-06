@@ -1,0 +1,321 @@
+/* ==========================================================================
+   Đặc Sản Tây Nguyên — style.css
+   Bảng màu lấy cảm hứng từ đất đỏ bazan, hạt cà phê rang và hoa văn thổ cẩm
+   của các dân tộc Ê Đê, M'nông, Gia Rai.
+   ========================================================================== */
+
+:root {
+  /* Màu sắc */
+  --color-bg: #1c1410;          /* nền đất bazan sẫm */
+  --color-surface: #2a211b;     /* bề mặt thẻ sản phẩm */
+  --color-surface-alt: #34281f;
+  --color-border: #4a392c;
+  --color-text: #f2e8dc;        /* chữ chính - màu kem */
+  --color-text-muted: #b5a79a;
+  --color-accent: #c1440e;      /* đỏ đất / đỏ thổ cẩm */
+  --color-accent-hover: #a83a0c;
+  --color-gold: #d4a017;        /* vàng nghệ / vàng thổ cẩm */
+
+  /* Typography */
+  --font-display: "Fraunces", Georgia, serif;
+  --font-body: "Be Vietnam Pro", "Segoe UI", Roboto, sans-serif;
+
+  /* Layout */
+  --max-width: 1120px;
+  --radius: 10px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  line-height: 1.15;
+  margin: 0 0 16px;
+  color: var(--color-text);
+}
+
+a {
+  color: var(--color-gold);
+  text-decoration: none;
+}
+
+a:hover,
+a:focus-visible {
+  text-decoration: underline;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--color-gold);
+  outline-offset: 3px;
+}
+
+code {
+  background: var(--color-surface-alt);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.9em;
+}
+
+/* ==========================================================================
+   Header
+   ========================================================================== */
+
+.site-header {
+  border-bottom: 1px solid var(--color-border);
+  position: sticky;
+  top: 0;
+  background-color: rgba(28, 20, 16, 0.92);
+  backdrop-filter: blur(6px);
+  z-index: 10;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 18px;
+  padding-bottom: 18px;
+}
+
+.logo {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.logo-dot {
+  color: var(--color-accent);
+}
+
+.main-nav {
+  display: flex;
+  gap: 28px;
+}
+
+.main-nav a {
+  color: var(--color-text);
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.main-nav a:hover {
+  color: var(--color-gold);
+}
+
+/* ==========================================================================
+   Hero / Giới thiệu
+   ========================================================================== */
+
+.hero {
+  padding: 96px 0 72px;
+}
+
+.hero-inner {
+  max-width: 760px;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-size: 0.78rem;
+  color: var(--color-gold);
+  font-weight: 600;
+  margin: 0 0 18px;
+}
+
+.hero h1 {
+  font-size: clamp(2.4rem, 5vw, 3.6rem);
+  margin-bottom: 22px;
+}
+
+.intro-text {
+  font-size: 1.05rem;
+  color: var(--color-text-muted);
+  margin-bottom: 32px;
+}
+
+.btn-primary {
+  display: inline-block;
+  background-color: var(--color-accent);
+  color: #fff;
+  padding: 13px 28px;
+  border-radius: var(--radius);
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: background-color 0.2s ease;
+}
+
+.btn-primary:hover,
+.btn-primary:focus-visible {
+  background-color: var(--color-accent-hover);
+  text-decoration: none;
+}
+
+/* Dải hoa văn ngăn cách lấy cảm hứng từ hoạ tiết thổ cẩm (zic-zac 3 màu) */
+.pattern-divider {
+  height: 14px;
+  background:
+    linear-gradient(135deg, var(--color-accent) 25%, transparent 25%) 0 0 / 28px 28px,
+    linear-gradient(225deg, var(--color-accent) 25%, transparent 25%) 0 0 / 28px 28px,
+    linear-gradient(135deg, var(--color-gold) 25%, transparent 25%) 14px 14px / 28px 28px,
+    linear-gradient(225deg, var(--color-gold) 25%, transparent 25%) 14px 14px / 28px 28px;
+  background-color: var(--color-surface-alt);
+}
+
+/* ==========================================================================
+   Sản phẩm
+   ========================================================================== */
+
+.products {
+  padding: 72px 0;
+}
+
+.products h2,
+.contact h2 {
+  font-size: 2rem;
+}
+
+.section-subtitle {
+  color: var(--color-text-muted);
+  margin-bottom: 40px;
+  font-size: 0.95rem;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 24px;
+}
+
+.loading-text {
+  color: var(--color-text-muted);
+  font-style: italic;
+}
+
+.product-card {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--color-accent);
+}
+
+.product-card__image {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  background-color: var(--color-surface-alt);
+  display: block;
+}
+
+.product-card__body {
+  padding: 18px 20px 22px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.product-card__name {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  margin: 0 0 8px;
+}
+
+.product-card__desc {
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+  margin: 0 0 16px;
+  flex: 1;
+}
+
+.product-card__price {
+  color: var(--color-gold);
+  font-weight: 700;
+  font-size: 1.05rem;
+}
+
+/* ==========================================================================
+   Liên hệ
+   ========================================================================== */
+
+.contact {
+  padding: 64px 0 88px;
+  border-top: 1px solid var(--color-border);
+}
+
+.contact-detail {
+  margin: 6px 0;
+  color: var(--color-text-muted);
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+
+.site-footer {
+  border-top: 1px solid var(--color-border);
+  padding: 24px 0;
+  color: var(--color-text-muted);
+  font-size: 0.85rem;
+}
+
+/* ==========================================================================
+   Responsive
+   ========================================================================== */
+
+@media (max-width: 640px) {
+  .header-inner {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .hero {
+    padding: 64px 0 48px;
+  }
+
+  .products {
+    padding: 48px 0;
+  }
+}
+
+/* Tôn trọng cài đặt giảm chuyển động của người dùng */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .product-card {
+    transition: none;
+  }
+}

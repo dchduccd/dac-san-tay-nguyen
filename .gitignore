@@ -1,0 +1,34 @@
+# Dependencies
+node_modules/
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Biến môi trường
+.env
+.env.local
+.env.*.local
+
+# Log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+*.log
+
+# Build output
+dist/
+build/
+
+# File hệ điều hành
+.DS_Store
+Thumbs.db
+
+# File biên tập / IDE
+.vscode/
+.idea/
+*.swp
+
+# Khác
+.cache/
+.temp/
+.tmp/

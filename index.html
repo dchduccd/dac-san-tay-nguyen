@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Khám phá đặc sản Tây Nguyên: cà phê, mật ong rừng, hồ tiêu, bơ sáp, hạt mắc ca và nhiều sản vật núi rừng khác." />
+  <title>Đặc Sản Tây Nguyên</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <span class="logo">Tây Nguyên<span class="logo-dot">.</span></span>
+      <nav class="main-nav">
+        <a href="#gioi-thieu">Giới thiệu</a>
+        <a href="#san-pham">Sản phẩm</a>
+        <a href="#lien-he">Liên hệ</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="gioi-thieu">
+      <div class="container hero-inner">
+        <p class="eyebrow">Núi rừng Cao Nguyên &mdash; Đắk Lắk · Gia Lai · Kon Tum · Đắk Nông · Lâm Đồng</p>
+        <h1>Đặc Sản Tây Nguyên</h1>
+        <p class="intro-text">
+          Tây Nguyên là vùng đất đỏ bazan trù phú, nơi hội tụ khí hậu cao nguyên mát mẻ
+          và văn hoá cồng chiêng lâu đời. Từ những nương cà phê bạt ngàn, vườn tiêu xanh mướt
+          đến rừng cây mắc ca và đàn ong rừng tự nhiên, mỗi sản vật nơi đây đều mang trong mình
+          hương vị đặc trưng của nắng gió cao nguyên. Chúng tôi tuyển chọn và mang đến cho bạn
+          những đặc sản chất lượng nhất, được thu hái và chế biến trực tiếp từ bà con nông dân
+          bản địa.
+        </p>
+        <a href="#san-pham" class="btn-primary">Xem sản phẩm</a>
+      </div>
+    </section>
+
+    <div class="pattern-divider" role="presentation" aria-hidden="true"></div>
+
+    <section class="products" id="san-pham">
+      <div class="container">
+        <h2>Sản phẩm đặc sản</h2>
+        <p class="section-subtitle">Danh sách sản phẩm sẽ được tải tự động từ dữ liệu <code>data/products.json</code>.</p>
+
+        <div id="product-list" class="product-grid">
+          <!-- Các thẻ sản phẩm sẽ được JavaScript render vào đây -->
+          <p class="loading-text">Đang tải danh sách sản phẩm...</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="lien-he">
+      <div class="container">
+        <h2>Liên hệ</h2>
+        <p>Bạn muốn đặt hàng hoặc hợp tác phân phối? Hãy liên hệ với chúng tôi.</p>
+        <p class="contact-detail">Email: <a href="mailto:lienhe@dacsantaynguyen.vn">lienhe@dacsantaynguyen.vn</a></p>
+        <p class="contact-detail">Điện thoại: <a href="tel:02623800000">0262 380 0000</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 Đặc Sản Tây Nguyên. Dự án khởi tạo cho mục đích học tập / demo.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

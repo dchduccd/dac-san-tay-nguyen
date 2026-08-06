@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "name": "Cà phê Robusta rang xay Đắk Lắk",
+    "price": 120000,
+    "description": "Cà phê Robusta nguyên chất trồng trên đất đỏ bazan Đắk Lắk, rang mộc, hương thơm đậm đà, vị đắng dịu đặc trưng của cao nguyên.",
+    "image": "assets/images/ca-phe-robusta.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Mật ong rừng Tây Nguyên",
+    "price": 250000,
+    "description": "Mật ong nguyên chất thu hoạch từ rừng khộp Tây Nguyên, vị ngọt thanh, giàu dưỡng chất, không pha tạp chất.",
+    "image": "assets/images/mat-ong-rung.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Hồ tiêu đen Chư Sê",
+    "price": 95000,
+    "description": "Hồ tiêu đen Chư Sê (Gia Lai) hạt chắc, cay nồng đặc trưng, được phơi khô tự nhiên và đóng gói cẩn thận.",
+    "image": "assets/images/ho-tieu-den.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Bơ sáp Đắk Lắk",
+    "price": 60000,
+    "description": "Bơ sáp ruột vàng, dẻo béo, thơm ngậy, trồng theo tiêu chuẩn VietGAP tại vùng đất Đắk Lắk.",
+    "image": "assets/images/bo-sap.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Hạt mắc ca Lâm Đồng",
+    "price": 220000,
+    "description": "Hạt mắc ca sấy nguyên vỏ, nhân béo giòn, giàu dinh dưỡng, thu hoạch từ vùng nguyên liệu Lâm Đồng.",
+    "image": "assets/images/hat-macca.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Rượu cần Tây Nguyên",
+    "price": 180000,
+    "description": "Rượu cần truyền thống ủ men lá rừng theo phương pháp của người Ê Đê, hương vị nồng ấm, đậm đà bản sắc văn hoá cao nguyên.",
+    "image": "assets/images/ruou-can.jpg"
+  }
+]

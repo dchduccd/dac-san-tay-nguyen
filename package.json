@@ -1,0 +1,24 @@
+{
+  "name": "dac-san-tay-nguyen",
+  "version": "1.0.0",
+  "description": "Trang web giới thiệu và trưng bày các sản phẩm đặc sản Tây Nguyên: cà phê, mật ong rừng, hồ tiêu, bơ sáp, hạt mắc ca...",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx http-server . -p 8080 -c-1",
+    "test": "echo \"Chưa có test nào được thiết lập\" && exit 0"
+  },
+  "keywords": [
+    "tay-nguyen",
+    "dac-san",
+    "ca-phe",
+    "front-end",
+    "html",
+    "css",
+    "javascript"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}
