@@ -86,4 +86,69 @@ function loadProducts() {
   listEl.appendChild(fragment);
 }
 
-document.addEventListener("DOMContentLoaded", loadProducts);
+/**
+ * Gửi form đăng ký tới Express bằng POST/fetch().
+ */
+function setupRegisterForm() {
+  const form = document.getElementById("register-form");
+  const message = document.getElementById("register-message");
+  if (!form || !message) return;
+
+  form.addEventListener("submit", async function (event) {
+    event.preventDefault();
+    message.textContent = "";
+    message.className = "register-message";
+
+    const fullName = document.getElementById("fullName").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const password = document.getElementById("password").value;
+
+    // Client kiểm tra dữ liệu cơ bản.
+    if (fullName.length < 3) {
+      message.textContent = "Họ tên phải có ít nhất 3 ký tự.";
+      message.classList.add("error");
+      return;
+    }
+
+    if (!email || !email.includes("@")) {
+      message.textContent = "Email không hợp lệ.";
+      message.classList.add("error");
+      return;
+    }
+
+    if (password.length < 6) {
+      message.textContent = "Mật khẩu phải có ít nhất 6 ký tự.";
+      message.classList.add("error");
+      return;
+    }
+
+    try {
+      const response = await fetch("/api/account/register", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({ fullName, email, password })
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        message.textContent = data.message;
+        message.classList.add("success");
+        form.reset();
+      } else {
+        message.textContent = data.message || "Đăng ký không thành công.";
+        message.classList.add("error");
+      }
+    } catch (error) {
+      message.textContent = "Không thể kết nối đến server.";
+      message.classList.add("error");
+    }
+  });
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  loadProducts();
+  setupRegisterForm();
+});
