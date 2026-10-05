@@ -320,3 +320,65 @@ code {
   }
 }
 /* Commit 3: Bổ sung định dạng giao diện ban đầu */
+
+/* ==========================================================================
+   Form đăng ký tài khoản - bài kiểm tra giữa kỳ
+   ========================================================================== */
+
+.register {
+  padding: 72px 0;
+  border-top: 1px solid var(--color-border);
+}
+
+.register-inner {
+  max-width: 620px;
+}
+
+.register-form {
+  display: grid;
+  gap: 10px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 28px;
+}
+
+.register-form label {
+  font-weight: 600;
+  margin-top: 8px;
+}
+
+.register-form input {
+  width: 100%;
+  padding: 13px 14px;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  background: var(--color-bg);
+  color: var(--color-text);
+  font: inherit;
+}
+
+.register-form input:focus {
+  outline: 2px solid var(--color-gold);
+  border-color: var(--color-gold);
+}
+
+.register-form button {
+  border: 0;
+  cursor: pointer;
+  margin-top: 12px;
+}
+
+.register-message {
+  min-height: 24px;
+  margin: 4px 0 0;
+  font-weight: 600;
+}
+
+.register-message.success {
+  color: #5fd18b;
+}
+
+.register-message.error {
+  color: #ff7b72;
+}
