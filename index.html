@@ -18,6 +18,7 @@
       <nav class="main-nav">
         <a href="#gioi-thieu">Giới thiệu</a>
         <a href="#san-pham">Sản phẩm</a>
+        <a href="#dang-ky">Đăng ký</a>
         <a href="#lien-he">Liên hệ</a>
       </nav>
     </div>
@@ -51,6 +52,32 @@
           <!-- Các thẻ sản phẩm sẽ được JavaScript render vào đây -->
           <p class="loading-text">Đang tải danh sách sản phẩm...</p>
         </div>
+      </div>
+    </section>
+
+    <section class="register" id="dang-ky">
+      <div class="container register-inner">
+        <h2>Đăng ký tài khoản</h2>
+        <p class="section-subtitle">
+          Tạo tài khoản để lưu thông tin cá nhân, đặt hàng và theo dõi lịch sử mua sản phẩm.
+        </p>
+
+        <form id="register-form" class="register-form" novalidate>
+          <label for="fullName">Họ và tên</label>
+          <input id="fullName" name="fullName" type="text" minlength="3" required
+                 placeholder="Nhập họ và tên" />
+
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" required
+                 placeholder="example@gmail.com" />
+
+          <label for="password">Mật khẩu</label>
+          <input id="password" name="password" type="password" minlength="6" required
+                 placeholder="Ít nhất 6 ký tự" />
+
+          <button type="submit" class="btn-primary">Đăng ký</button>
+          <p id="register-message" class="register-message" role="alert" aria-live="polite"></p>
+        </form>
       </div>
     </section>
 
