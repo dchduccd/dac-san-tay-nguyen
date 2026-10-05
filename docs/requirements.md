@@ -63,6 +63,28 @@ giao diện tĩnh, dữ liệu mẫu và cấu trúc thư mục nền tảng đ�
 
 - **Giai đoạn hiện tại:** HTML/CSS/JavaScript thuần (vanilla), không phụ
   thuộc framework, dữ liệu mẫu lưu trong file JSON tĩnh.
-- **Giai đoạn mở rộng:** có thể tích hợp framework front-end (React, Vue)
-  và backend/API (Node.js, database) để quản lý dữ liệu sản phẩm, đơn hàng
-  và tài khoản người dùng thực tế.
+- **Giai đoạn mở rộng:** tích hợp backend/API bằng Node.js + Express và MongoDB
+  để xử lý đăng ký tài khoản theo yêu cầu bài kiểm tra giữa kỳ.
+
+
+## 6. Chức năng đăng ký tài khoản
+
+Quy trình thực hiện:
+1. Người dùng nhập form đăng ký.
+2. Client kiểm tra dữ liệu cơ bản.
+3. Client gửi POST request bằng `fetch()`.
+4. Server kiểm tra dữ liệu request.
+5. Server kiểm tra email trong collection `accounts`.
+6. Nếu email tồn tại, server trả `409 Conflict`.
+7. Nếu email chưa tồn tại, server thêm tài khoản vào MongoDB.
+8. Server trả `201 Created`.
+9. Client hiển thị kết quả.
+
+Các trường hợp kiểm thử:
+- Họ tên để trống → báo lỗi.
+- Email không hợp lệ → báo lỗi.
+- Mật khẩu dưới 6 ký tự → báo lỗi.
+- Email chưa tồn tại → tạo tài khoản.
+- Email đã tồn tại → HTTP 409.
+- Server không chạy → client báo lỗi kết nối.
+- MongoDB không kết nối → server trả lỗi phù hợp.
